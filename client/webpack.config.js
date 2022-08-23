@@ -25,7 +25,19 @@ module.exports = () => {
       }),
       new GenerateSW(),
       new WebpackPwaManifest({
-        // fill with necessary things
+        name: 'Text Editor',
+        short_name: 'TextEdit',
+        description: 'Text editor',
+        background_color: '#ffffff',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('assets/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       }),
     ],
 
